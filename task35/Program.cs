@@ -17,7 +17,6 @@ void printArray(int[] array)
     Console.WriteLine();
 }
 
-
 int checkRange(int minVal, int maxVal, int[] array)
 {
     int count = 0;
@@ -26,7 +25,7 @@ int checkRange(int minVal, int maxVal, int[] array)
     return count;
 }
 
-int size = 12;
+int size = 123;
 int minVal = 10;
 int maxVal = 99;
 
