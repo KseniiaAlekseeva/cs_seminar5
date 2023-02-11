@@ -29,22 +29,17 @@ int getNumber()
 bool checkNumber(int num, int[] array)
 {
     bool flag = false;
-
-
-    for (int i = 0; i < array.Length; i++)
+    int i = 0;
+    while ((i < array.Length) && (flag == false))
     {
         if (num == array[i])
-        {
             flag = true;
-            break;
-        }
+        i++;
     }
     return flag;
 }
 
 int size = 12;
-int minVal = -9;
-int maxVal = 9;
 int num;
 bool check;
 
@@ -52,4 +47,5 @@ int[] arr = generateArray(size, maxVal: 5);
 printArray(arr);
 num = getNumber();
 check = checkNumber(num, arr);
-Console.WriteLine(check);
+if (check) Console.WriteLine($"Number {num} is in array.");
+else Console.WriteLine($"Number {num} is not in array.");
